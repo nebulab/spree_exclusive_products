@@ -1,7 +1,7 @@
 SpreeExclusiveProducts
 ======================
 
-Introduction goes here.
+It allows to show some variants only to specific users roles. With this extension you can associate a variant to a role and it will be made available only for users logged with that specific role.
 
 Installation
 ------------
@@ -36,4 +36,4 @@ Simply add this require statement to your spec_helper:
 require 'spree_exclusive_products/factories'
 ```
 
-Copyright (c) 2014 [name of extension creator], released under the New BSD License
+Copyright (c) 2014 [Nebulab](http://nebulab.it), released under the New BSD License
