@@ -2,3 +2,5 @@ AllCops:
   Exclude:
     - 'spec/dummy/**/*'
     - 'bin/**/*'
+Documentation:
+  Enabled: false
