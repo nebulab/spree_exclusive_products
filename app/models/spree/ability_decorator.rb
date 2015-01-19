@@ -5,8 +5,9 @@ class AbilityDecorator
       can :manage, :all
     else
       cannot :display, Spree::Variant
-      can :display, Spree::Variant, Spree::Variant.exclusive_for(user.spree_role_ids) do |variant|
-        variant.spree_roles.empty? || variant.spree_roles.any? { |spree_role| user.spree_roles.include? spree_role }
+      can :display, Spree::Variant do |variant|
+        variant.spree_roles.empty? ||
+          variant.spree_roles.any? { |spree_role| user.spree_roles.include?(spree_role) }
       end
     end
   end
