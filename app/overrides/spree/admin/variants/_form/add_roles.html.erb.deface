@@ -1,8 +1,9 @@
 <!-- insert_bottom '[data-hook="admin_variant_form_additional_fields"]' -->
 
-<div class="field"><%= f.label :spree_roles, Spree.t(:roles)  %>
+<div class="field">
+  <%= f.label :spree_roles, Spree.t(:roles) %>
   <% Spree::Role.all.each do |role| %>
-    <div class="checkbox">
+    <div class="from-group">
       <%= label_tag "variant_spree_role_#{role.name}" do %>
         <%= check_box_tag 'variant[spree_role_ids][]', role.id, @variant.spree_roles.include?(role), :id => "variant_spree_role_#{role.name}" %>
         <%= role.name %>

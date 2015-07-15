@@ -1,8 +1,8 @@
 <!-- replace_contents 'div#product-variants' -->
 
-<div id="product-variants" class="columns five alpha">
+<div id="product-variants" class="col-md-6">
   <h6 class="product-section-title"><%= Spree.t(:variants) %></h6>
-  <ul>
+  <ul class="list-group">
     <% @product.variants_and_option_values(current_currency).each_with_index do |variant, index| %>
       <% if can? :read, variant %>
         <li>
